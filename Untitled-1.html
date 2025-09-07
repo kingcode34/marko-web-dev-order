@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marko Web Developers</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Roboto', sans-serif; background:#f5f5f5; color:#333; scroll-behavior:smooth; }
+  header { position:sticky; top:0; background:#0d6efd; color:#fff; padding:15px 0; text-align:center; z-index:1000; }
+  nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:700; }
+  nav a:hover { text-decoration:underline; }
+  .container { width:90%; max-width:1200px; margin:20px auto; }
+  h1,h2,h3 { margin-bottom:10px; }
+
+  .hero { text-align:center; padding:80px 20px; background: linear-gradient(135deg,#0d6efd,#6c63ff); color:#fff; border-radius:10px; margin-bottom:40px; }
+  .hero h1 { font-size:2.5rem; margin-bottom:15px; }
+  .hero p { font-size:1.2rem; margin-bottom:20px; }
+  .hero .btn { padding:12px 25px; background:#fff; color:#0d6efd; border-radius:5px; font-weight:700; text-decoration:none; transition:0.3s; }
+  .hero .btn:hover { background:#e0e0e0; }
+
+  .services { margin-bottom:50px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+  .card { background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center; transition:0.3s; }
+  .card:hover { transform:translateY(-5px); box-shadow:0 6px 20px rgba(0,0,0,0.15); }
+  .card h3 { margin-bottom:10px; }
+  .card p { margin-bottom:15px; }
+
+  .portfolio img { width:100%; border-radius:10px; margin-bottom:10px; }
+
+  form { display:flex; flex-direction:column; gap:15px; background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1); }
+  input, textarea, select { padding:12px; border:1px solid #ccc; border-radius:5px; width:100%; }
+  form .btn { background:#0d6efd; color:#fff; border:none; border-radius:5px; padding:12px; cursor:pointer; font-weight:700; transition:0.3s; text-align:center; display:block; text-decoration:none; }
+  form .btn:hover { background:#0b5ed7; }
+
+  footer { text-align:center; padding:20px; background:#212529; color:#fff; margin-top:40px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Marko Web Developers</h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#order">Order</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero container">
+  <h1>Professional Websites for Individuals & Businesses</h1>
+  <p>We create modern, responsive, and beautiful websites tailored to your needs.</p>
+  <a href="#order" class="btn">Place an Order</a>
+</section>
+
+<section class="services container" id="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Basic Website</h3>
+      <p>One-page personal or business site. Responsive design included.</p>
+      <p><strong>Price: $50</strong></p>
+    </div>
+    <div class="card">
+      <h3>Business Website</h3>
+      <p>Multi-page website with contact form and service pages.</p>
+      <p><strong>Price: $150</strong></p>
+    </div>
+    <div class="card">
+      <h3>E-commerce Store</h3>
+      <p>Full online store with product catalog, cart, and checkout demo.</p>
+      <p><strong>Price: $300+</strong></p>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio container" id="portfolio">
+  <h2>Portfolio</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581091215365-8b8a5d4dbf3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Project 1">
+      <h3>Project 1</h3>
+      <p>Personal blog with responsive and clean design.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c443d8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Project 2">
+      <h3>Project 2</h3>
+      <p>Business website with portfolio and contact form.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1612831660863-50e2c38b6322?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Project 3">
+      <h3>Project 3</h3>
+      <p>Demo e-commerce store template with product catalog.</p>
+    </div>
+  </div>
+</section>
+
+<section class="order container" id="order">
+  <h2>Place Your Order</h2>
+  <form onsubmit="alert('Your order has been submitted! We will contact you via WhatsApp.'); return false;">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <select required>
+      <option value="">Select Website Type</option>
+      <option value="basic">Basic Website</option>
+      <option value="business">Business Website</option>
+      <option value="ecommerce">E-commerce Store</option>
+    </select>
+    <textarea placeholder="Describe your requirements" rows="5" required></textarea>
+    <a href="https://wa.me/256766561318" class="btn">Contact via WhatsApp</a>
+  </form>
+</section>
+
+<section class="contact container" id="contact">
+  <h2>Contact Us Directly</h2>
+  <p>You can reach us instantly via WhatsApp: <a href="https://wa.me/256766561318" class="btn">+256 766 561 318</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Marko Web Developers. All rights reserved.</p>
+</footer>
+</body>
+</html>
